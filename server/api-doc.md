@@ -95,10 +95,8 @@ Response:
 ```json
 [
   {
-    "name": "string",
     "cases": "integer",
-    "deaths": "integer",
-    "recovered": "integer"
+    "Country": ""
   }
 ]
 ```
@@ -118,7 +116,7 @@ Request:
 
 ```json
 {
-  "report": "integer",
+  "cases": "integer",
   "CountryId": "integer"
 }
 ```
