@@ -7,7 +7,7 @@ class controllerUser {
         let { username, password } = req.body
         try {
             let found = await User.findOne({ where: { username, password } })
-            if (!found) throw customError(404)
+            if (!found) throw customError(400)
             let token = await jwt.sign({ id: found.id, username: found.username }, process.env.JWT_SECRET)
             let answer = { token, id: found.id, username: found.username }
             res.status(200).json(answer)
